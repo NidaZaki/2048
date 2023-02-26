@@ -1,18 +1,54 @@
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-image: linear-gradient(to right, rgb(105, 105, 227), rgb(211, 147, 211))
+}
+
+h1 {
+    color: #fff;
 }
 
 hr{
     width: 500px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.score-container-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1vw;
+    padding: 0.5vw 1vw 1vw;
+}
+.score-container{
+    /* background-image: linear-gradient(to right, rgb(105, 105, 227), rgb(211, 147, 211)); */
+    width: 90px;
+    height: 90px;
+    padding: 1px;
+    border: 5px solid #2a3f6c;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+}
+
+#best-score, #score {
+    font-size: 35px;
+    margin: 0;
+}
+
+.header {
+    margin: 0.51em;
 }
 
 #board{
-    width: 400px;
+    width: 399px;
     height: 400px;
 
-    background-color: burlywood;
-    border: 6px solid black;
+    /* background-image: linear-gradient(to right, rgb(105, 105, 227), rgb(211, 147, 211)); */
+    /* border: 6px solid gray; */
 
     margin: 0 auto;
     display: flex;
@@ -22,7 +58,8 @@ hr{
 .tile {
     width: 90px;
     height: 90px;
-    border: 5px solid black;
+    border: 5px solid #2a3f6c;
+    border-radius: 15px;
 
     font-size: 40px;
     font-weight: bold;
@@ -32,32 +69,32 @@ hr{
 }
 
 .x2 {
-    background-color: white;
+    background-color: rgb(45, 143, 195);
     color: black;
 }
 
 .x4{
-    background-color: red;
+    background-color: rgb(114, 23, 170);
     color: white;
 }
 
 .x8 {
-    background-color: aliceblue;
-    color: #000;
+    background-color: rgb(126, 68, 157);
+    color: white;
 }
 
 .x16 {
-    background-color: aliceblue;
+    background-color: rgb(163, 44, 185);
     color: #000; 
 }
 
 .x32 {
-    background-color: aliceblue;
+    background-color: rgb(151, 34, 124);
     color: #000;
 }
 
 .x64 {
-    background-color: aliceblue;
+    background-color: rgb(75, 180, 212);
     color: #000;
 }
 
@@ -82,6 +119,21 @@ hr{
 }
 
 .x2048 {
+    background-color: aliceblue;
+    color: #000;
+}
+
+.x{
+    background-color: aliceblue;
+    color: #000;
+}
+
+.x{
+    background-color: aliceblue;
+    color: #000;
+}
+
+.x{
     background-color: aliceblue;
     color: #000;
 }
