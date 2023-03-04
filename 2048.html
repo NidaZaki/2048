@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <title>2048</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+         <!-- add icon link -->
+        <link rel = "icon" href = "icon.png" type = "image/x-icon">
         <link rel="stylesheet" href="2048.css">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         
         <script type="text/javascript" src="2048.js"></script>
+        
     </head>
 
-    <body>
+    <body id="bootstrap-overrides">
         <h1>2048</h1>
         <hr>
         <div class="score-container-parent">
+            <div class="column">
+                <button class="score-container new-game" onclick="newGame()">NEW GAME</button>
+                <button class="score-container new-game" onclick="storePreviousTiles()">UNDO</button>
+            </div>
+           
             <div class="score-container">
                 <p class="header">SCORE</p> 
                 <p id="score">0</p>
@@ -19,11 +35,71 @@
                 <p class="header">BEST</p> 
                 <p id="best-score">0</p>
             </div>
+
         </div>
         
         <div id="board">
+            <p id ="game-over">Game Over!</p>
+            <button id ="try-again" onclick="newGame()">Try Again</button>
         </div>
+
+        <div class="how-to-play-section">
+            <button type="button" class="score-container new-game how-to" data-toggle="modal" data-target="#myModal">HOW TO PLAY</button>
+        </div>
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">How To Play 2048</h4>
+                </div>
+                <div class="modal-body">
+                  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+          </ol>
         
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <!-- <div class="item active">
+             <img src="1.jpeg" class="d-block w-100" alt="Slide 1">
+            </div> -->
+            <div class="item active">
+              <img src="sliding.png" class="d-block w-100" alt="Slide 0">
+            </div>
+              <div class="item">
+              <img src="merging.PNG" class="d-block w-100" alt="Slide 1">
+            </div>
+          </div>
+        
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+
     </body>
 </html>
 
